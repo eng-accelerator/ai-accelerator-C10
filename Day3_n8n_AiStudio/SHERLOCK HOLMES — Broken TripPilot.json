@@ -1,0 +1,234 @@
+{
+  "name": "SHERLOCK HOLMES — Broken TripPilot",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "trippilot/chats",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "b5551e43-715d-4700-a16a-a2ed7ad5d5ca",
+      "name": "WEB — TripPilot Chat",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        192,
+        224
+      ],
+      "webhookId": "4f87fc38-2624-4c15-863b-01683f72b908",
+      "notes": "FAULT 1: page sends POST /trippilot/chat."
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.body.query }}",
+        "options": {
+          "systemMessage": "You are TripPilot. Use Google Sheets for trip information. Use Gmail to email itineraries. Return JSON with reply, source and email_sent. Answer clearly."
+        }
+      },
+      "id": "4893e5f0-1eb4-425d-84c5-09fda6d3fe0a",
+      "name": "AI Agent — TripPilot",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        432,
+        224
+      ],
+      "notes": "FAULTS 2–3: wrong input field for website; voice guidance is too weak."
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "id": "d251e013-0e5c-4cba-84d1-6764c93827dc",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        336,
+        544
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "igT37kN3VGzIM4MP",
+          "name": "OpenAi Divij"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "TripPilotData",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "id": "2e9bcf89-71be-4451-af1a-1dc2d6b59e79",
+      "name": "Google Sheets — TripPilot Database",
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7,
+      "position": [
+        528,
+        560
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "hjEHdOZS1xlMDCM6",
+          "name": "Akhil - Work Account"
+        }
+      },
+      "notes": "FAULT 4: expected tab is TripPilot_DB."
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Send the itinerary to the traveller.",
+        "sendTo": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Email', 'Traveller email address', 'string') }}",
+        "subject": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Subject', 'Email subject', 'string') }}",
+        "message": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', 'Itinerary email body', 'string') }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "id": "55f62b20-a2cb-476e-b0cd-bcf8aebfa50f",
+      "name": "Gmail — Email Itinerary",
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        704,
+        608
+      ],
+      "webhookId": "8bb4c0d3-d5b3-4128-ba40-98bb82ae62a7",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "7j7puJM9pUZyyL2u",
+          "name": "Dileep Outskill"
+        }
+      },
+      "notes": "FAULT 5: input contract is Email instead of To."
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw=String($json.output??\"\");\nlet parsed;\ntry { parsed=JSON.parse(raw.replace(/^```json\\s*/,\"\").replace(/```$/,\"').trim()); } catch(e) { parsed={source:\"website\",reply:raw,email_sent:false}; }\nreturn [{json:parsed}];"
+      },
+      "id": "d7a39f07-8696-437c-982f-a057bb952779",
+      "name": "Parse Agent Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        800,
+        224
+      ],
+      "notes": "FAULT 6: fallback source is website, router expects web."
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { answer: $json.reply } }}",
+        "options": {}
+      },
+      "id": "db1a6733-1ca6-4d35-98b4-76d1d3db415b",
+      "name": "RESPOND — Website",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        1008,
+        224
+      ],
+      "notes": "FAULT 7: browser expects reply, not answer."
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "WEB — TripPilot Chat": {
+      "main": [
+        [
+          {
+            "node": "AI Agent — TripPilot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent — TripPilot",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets — TripPilot Database": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent — TripPilot",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent — TripPilot": {
+      "main": [
+        [
+          {
+            "node": "Parse Agent Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Agent Response": {
+      "main": [
+        [
+          {
+            "node": "RESPOND — Website",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail — Email Itinerary": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent — TripPilot",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "496d119e-390e-4e29-9232-d21186e0994c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "5adcf055af070598f43d6403984bb72f646a6684587b890d0694cbc7278091f8"
+  },
+  "nodeGroups": [],
+  "id": "CugAhjEUDGTzwB2D",
+  "tags": []
+}
