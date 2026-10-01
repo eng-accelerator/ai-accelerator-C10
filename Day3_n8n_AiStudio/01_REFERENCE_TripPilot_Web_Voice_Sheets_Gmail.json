@@ -1,0 +1,334 @@
+{
+  "name": "TripPilot \u2014 Web Chat + ElevenLabs + Sheets + Gmail",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "trippilot/chat",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "8b4b8d5b-fa3e-4547-8683-17dbf898bf7a",
+      "name": "WEB \u2014 TripPilot Chat",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -900,
+        -220
+      ],
+      "notes": "Website payload: { source:'web', session_id:'...', message:'...', email:'optional' }"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "trippilot/voice",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "4cccfe04-37d0-4af7-aa37-4c2a10aaec73",
+      "name": "VOICE \u2014 ElevenLabs Tool",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -900,
+        220
+      ],
+      "notes": "ElevenLabs webhook tool sends text; n8n returns text."
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ JSON.stringify($json.body ?? $json) }}",
+        "options": {
+          "systemMessage": "You are TripPilot, a travel-planning assistant.\n\nUse the Google Sheets tool to look up TripPilot travel data before making claims about contacts, policies, hotels, prices or availability.\nUse the Gmail tool when the traveller explicitly asks to email an itinerary.\n\nReturn ONLY valid JSON:\n{\n  \"source\": \"web or voice\",\n  \"reply\": \"the response to the traveller\",\n  \"email_sent\": false\n}\n\nRules:\n- web: normal conversational answer; moderate detail is okay.\n- voice: concise, natural spoken response; 1\u20133 short sentences; no markdown.\n- Never invent data not in Google Sheets.\n- Do not claim an email was sent unless the Gmail tool was actually used."
+        }
+      },
+      "id": "5227772b-4123-47a3-b191-c2246e5b08b8",
+      "name": "AI Agent \u2014 TripPilot",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        -520,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "id": "e3a3a643-74f7-4875-96ee-2fcf2583fdb7",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -520,
+        270
+      ],
+      "notes": "Select your OpenAI credential after import."
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "TripPilot_DB",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "id": "e8f1041a-7c9a-4033-88d5-e0991fe6946c",
+      "name": "Google Sheets \u2014 TripPilot Database",
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7,
+      "position": [
+        -250,
+        430
+      ],
+      "notes": "One sheet/tab for demo data: policies, properties, contacts."
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('To', 'Traveller email address', 'string') }}",
+        "subject": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Subject', 'Email subject for the itinerary', 'string') }}",
+        "message": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', 'The complete itinerary email body', 'string') }}",
+        "options": {
+          "appendAttribution": false
+        },
+        "descriptionType": "manual",
+        "toolDescription": "Use this only when the traveller asks to email an itinerary. Ask for an email address if needed."
+      },
+      "id": "aad01f15-913e-4aa1-b458-58077e9f4a8f",
+      "name": "Gmail \u2014 Email Itinerary",
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        -20,
+        430
+      ],
+      "notes": "Select Gmail OAuth credential after import."
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw=String($json.output??\"\");\nlet parsed;\ntry { parsed=JSON.parse(raw.replace(/^```json\\s*/,\"\").replace(/```$/,\"').trim()); } catch(e) { parsed={source:\"web\",reply:raw,email_sent:false}; }\nreturn [{json:parsed}];"
+      },
+      "id": "e948f5fa-18f9-42d1-a787-1a46d48eae2d",
+      "name": "Parse Agent Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "rules",
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.source }}",
+                    "rightValue": "web",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "web"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.source }}",
+                    "rightValue": "voice",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "voice"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3cd4cc84-b2f0-464e-b412-530404440ed6",
+      "name": "Route \u2014 Web or Voice",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        250,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { reply: $json.reply, email_sent: $json.email_sent === true } }}",
+        "options": {}
+      },
+      "id": "3ebc7080-92e2-404d-a9ce-c813269d566c",
+      "name": "RESPOND \u2014 Website",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        520,
+        -130
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { reply: $json.reply } }}",
+        "options": {}
+      },
+      "id": "f4914c85-0f46-4162-8de2-c26384df32a6",
+      "name": "RESPOND \u2014 ElevenLabs",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        520,
+        130
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "WEB \u2014 TripPilot Chat": {
+      "main": [
+        [
+          {
+            "node": "AI Agent \u2014 TripPilot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "VOICE \u2014 ElevenLabs Tool": {
+      "main": [
+        [
+          {
+            "node": "AI Agent \u2014 TripPilot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent \u2014 TripPilot",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets \u2014 TripPilot Database": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent \u2014 TripPilot",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail \u2014 Email Itinerary": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent \u2014 TripPilot",
+            "type": "ai_tool",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "AI Agent \u2014 TripPilot": {
+      "main": [
+        [
+          {
+            "node": "Parse Agent Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Agent Response": {
+      "main": [
+        [
+          {
+            "node": "Route \u2014 Web or Voice",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route \u2014 Web or Voice": {
+      "main": [
+        [
+          {
+            "node": "RESPOND \u2014 Website",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "RESPOND \u2014 ElevenLabs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "24f00dba-f9c7-4b48-b664-444501a6a54f",
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}
