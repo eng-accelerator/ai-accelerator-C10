@@ -1,0 +1,54 @@
+# Secrets — never commit API keys
+.env
+.env.local
+.env.*.local
+
+# Personal research / planning notes (kept local, not for the public repo)
+research/
+
+# Brand deck: commit only the main .pptx; ignore previews / exports / manifests
+outskill_brand_deck/*
+!outskill_brand_deck/rag_for_engineers_outskill_brand.pptx
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter — checkpoints anywhere; notebook is generated locally (keep scripts/README as source of truth)
+.ipynb_checkpoints/
+code/notebook.ipynb
+
+# Deck tooling / JS deps (optional local scripts, not required for the Python session)
+code/generate_outskill_brand_deck.mjs
+node_modules/
+
+# Local clutter
+*.log
+
+# Raw session transcripts — kept local, not for the public repo
+*transcript*.txt
+
+# Session build artifacts
+**/lancedb_*/
+.lancedb/
+**/.lancedb/
+.cache/
+
+# Script-generated state
+code/scripts/.ctx_nodes.json
+code/scripts/eval_results.json
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo

@@ -1,0 +1,99 @@
+# Curated Kubernetes documentation subset (~80 files)
+# Each line is a path inside kubernetes/website repo, relative to repo root.
+# Fetched via raw.githubusercontent.com/kubernetes/website/main/<path>
+
+# Concepts — overview
+content/en/docs/concepts/overview/_index.md
+content/en/docs/concepts/overview/components.md
+
+# Architecture
+content/en/docs/concepts/architecture/_index.md
+content/en/docs/concepts/architecture/nodes.md
+content/en/docs/concepts/architecture/controller.md
+content/en/docs/concepts/architecture/cloud-controller.md
+content/en/docs/concepts/architecture/control-plane-node-communication.md
+content/en/docs/concepts/architecture/garbage-collection.md
+content/en/docs/concepts/architecture/leases.md
+
+# Workloads
+content/en/docs/concepts/workloads/_index.md
+content/en/docs/concepts/workloads/autoscaling.md
+content/en/docs/concepts/workloads/pods/_index.md
+content/en/docs/concepts/workloads/pods/init-containers.md
+content/en/docs/concepts/workloads/pods/disruptions.md
+content/en/docs/concepts/workloads/pods/pod-lifecycle.md
+content/en/docs/concepts/workloads/pods/pod-qos.md
+content/en/docs/concepts/workloads/pods/sidecar-containers.md
+content/en/docs/concepts/workloads/controllers/_index.md
+content/en/docs/concepts/workloads/controllers/deployment.md
+content/en/docs/concepts/workloads/controllers/replicaset.md
+content/en/docs/concepts/workloads/controllers/statefulset.md
+content/en/docs/concepts/workloads/controllers/daemonset.md
+content/en/docs/concepts/workloads/controllers/job.md
+content/en/docs/concepts/workloads/controllers/cron-jobs.md
+content/en/docs/concepts/workloads/controllers/ttlafterfinished.md
+
+# Services & networking
+content/en/docs/concepts/services-networking/_index.md
+content/en/docs/concepts/services-networking/service.md
+content/en/docs/concepts/services-networking/ingress.md
+content/en/docs/concepts/services-networking/ingress-controllers.md
+content/en/docs/concepts/services-networking/network-policies.md
+content/en/docs/concepts/services-networking/dns-pod-service.md
+content/en/docs/concepts/services-networking/endpoint-slices.md
+content/en/docs/concepts/services-networking/gateway.md
+content/en/docs/concepts/services-networking/dual-stack.md
+
+# Storage
+content/en/docs/concepts/storage/_index.md
+content/en/docs/concepts/storage/persistent-volumes.md
+content/en/docs/concepts/storage/storage-classes.md
+content/en/docs/concepts/storage/volumes.md
+content/en/docs/concepts/storage/dynamic-provisioning.md
+content/en/docs/concepts/storage/volume-snapshots.md
+content/en/docs/concepts/storage/storage-capacity.md
+
+# Configuration
+content/en/docs/concepts/configuration/_index.md
+content/en/docs/concepts/configuration/configmap.md
+content/en/docs/concepts/configuration/secret.md
+content/en/docs/concepts/configuration/manage-resources-containers.md
+content/en/docs/concepts/configuration/liveness-readiness-startup-probes.md
+
+# Scheduling & eviction
+content/en/docs/concepts/scheduling-eviction/_index.md
+content/en/docs/concepts/scheduling-eviction/kube-scheduler.md
+content/en/docs/concepts/scheduling-eviction/taint-and-toleration.md
+content/en/docs/concepts/scheduling-eviction/assign-pod-node.md
+content/en/docs/concepts/scheduling-eviction/pod-priority-preemption.md
+content/en/docs/concepts/scheduling-eviction/node-pressure-eviction.md
+content/en/docs/concepts/scheduling-eviction/api-eviction.md
+content/en/docs/concepts/scheduling-eviction/topology-spread-constraints.md
+content/en/docs/concepts/scheduling-eviction/resource-bin-packing.md
+
+# Policy
+content/en/docs/concepts/policy/resource-quotas.md
+content/en/docs/concepts/policy/limit-range.md
+
+# Security
+content/en/docs/concepts/security/_index.md
+content/en/docs/concepts/security/pod-security-standards.md
+content/en/docs/concepts/security/secrets-good-practices.md
+
+# Cluster admin
+content/en/docs/concepts/cluster-administration/_index.md
+
+# Tasks (run-application + configure-pod)
+content/en/docs/tasks/run-application/configure-pdb.md
+content/en/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough.md
+content/en/docs/tasks/run-application/scale-stateful-set.md
+content/en/docs/tasks/configure-pod-container/assign-cpu-resource.md
+content/en/docs/tasks/configure-pod-container/assign-memory-resource.md
+content/en/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes.md
+
+# Reference — command-line tools
+content/en/docs/reference/command-line-tools-reference/kubelet.md
+content/en/docs/reference/command-line-tools-reference/kube-apiserver.md
+content/en/docs/reference/command-line-tools-reference/kube-scheduler.md
+content/en/docs/reference/command-line-tools-reference/kube-controller-manager.md
+content/en/docs/reference/command-line-tools-reference/kube-proxy.md

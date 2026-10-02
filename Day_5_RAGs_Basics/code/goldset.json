@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "corpus": "kubernetes/website docs subset (~72 files)",
+  "notes": "30 questions for RAGAS faithfulness + context-relevance + answer-relevance. No reference answers — RAGAS judges against retrieved chunks, not a ground truth string. Categories tag the failure mode each question is designed to expose.",
+  "questions": [
+    {"id": "q01", "category": "exact_match", "question": "What is the default value of the --max-pods flag on the kubelet?"},
+    {"id": "q02", "category": "exact_match", "question": "What HTTP status code does the API server return when an admission webhook times out?"},
+    {"id": "q03", "category": "exact_match", "question": "Which field on a Service resource is used to select the Pods that traffic is routed to?"},
+    {"id": "q04", "category": "exact_match", "question": "What kubectl command creates a PodDisruptionBudget from a YAML file?"},
+    {"id": "q05", "category": "exact_match", "question": "What is the default value of the --leader-elect flag on kube-scheduler?"},
+    {"id": "q06", "category": "exact_match", "question": "What is the name of the controller that handles graceful, ordered scaling of replicas with persistent identities?"},
+    {"id": "q07", "category": "exact_match", "question": "What kind of object does Kubernetes use to expose a Service to traffic outside the cluster via HTTP/HTTPS routing rules?"},
+    {"id": "q08", "category": "exact_match", "question": "What does the spec.minAvailable field on a PodDisruptionBudget specify?"},
+    {"id": "q09", "category": "exact_match", "question": "Which kube-controller-manager flag controls the period at which it checks node health?"},
+    {"id": "q10", "category": "exact_match", "question": "What is the default cluster DNS suffix used inside Pods?"},
+
+    {"id": "q11", "category": "cross_section", "question": "How does an Ingress controller decide which backend Pod to forward a request to?"},
+    {"id": "q12", "category": "cross_section", "question": "What is the difference between a ReplicaSet and a Deployment, and when should you use each?"},
+    {"id": "q13", "category": "cross_section", "question": "How are ConfigMaps and Secrets exposed to a running container, and what are the security trade-offs?"},
+    {"id": "q14", "category": "cross_section", "question": "What is the difference between a liveness probe, a readiness probe, and a startup probe?"},
+    {"id": "q15", "category": "cross_section", "question": "How do taints and tolerations interact with node affinity rules during scheduling?"},
+    {"id": "q16", "category": "cross_section", "question": "What is the difference between voluntary and involuntary disruptions in Kubernetes?"},
+    {"id": "q17", "category": "cross_section", "question": "How does a StatefulSet provide stable network identities to its Pods?"},
+    {"id": "q18", "category": "cross_section", "question": "What happens to a Pod's PersistentVolumeClaim when the Pod is deleted vs. when the StatefulSet is deleted?"},
+    {"id": "q19", "category": "cross_section", "question": "How does the Horizontal Pod Autoscaler decide when to scale up, and what metrics can it use?"},
+    {"id": "q20", "category": "cross_section", "question": "What is the difference between a DaemonSet and a Deployment with one replica per node?"},
+
+    {"id": "q21", "category": "multi_hop", "question": "If I want zero-downtime rolling updates for a StatefulSet that uses persistent storage, what features must I configure together?"},
+    {"id": "q22", "category": "multi_hop", "question": "What happens when a Node becomes NotReady — how does Kubernetes decide when to evict its Pods, and what controls the timing?"},
+    {"id": "q23", "category": "multi_hop", "question": "How do I run a workload that must execute exactly once per node, survive node restarts, and be drained gracefully during maintenance?"},
+    {"id": "q24", "category": "multi_hop", "question": "What is the full path a request takes from an external client to a specific Pod when the cluster uses an Ingress, a Service of type ClusterIP, and a Deployment?"},
+    {"id": "q25", "category": "multi_hop", "question": "How can I prevent a noisy neighbour Pod from consuming all the memory on a node, and what happens if the limit is exceeded?"},
+    {"id": "q26", "category": "multi_hop", "question": "What is the interaction between PodDisruptionBudgets and node drain operations during a cluster upgrade?"},
+    {"id": "q27", "category": "multi_hop", "question": "How does the scheduler decide which node to place a Pod on when there are taints, node affinity rules, topology spread constraints, and resource requests in play?"},
+    {"id": "q28", "category": "multi_hop", "question": "If a Service of type LoadBalancer is created in a cluster running on a cloud provider, what sequence of components are involved in provisioning the external load balancer?"},
+    {"id": "q29", "category": "multi_hop", "question": "How can I dynamically provision storage for a StatefulSet such that each replica gets its own PersistentVolume, and what controls whether the volume survives Pod deletion?"},
+    {"id": "q30", "category": "multi_hop", "question": "What is the full sequence of events when a Pod fails its liveness probe — what does the kubelet do, what happens to the container, and how does the Deployment controller respond?"}
+  ]
+}
