@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.venv
+venv/
+ENV/
+env/
+
+# Environment Variables
+.env
+
+# ChromaDB database folder
+chroma_db/
+
+# IDE files
+.vscode/
+.idea/
+.ipynb_checkpoints/
