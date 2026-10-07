@@ -1,0 +1,10 @@
+{
+  "answerModels": [
+    "openai/gpt-6.1-sol",
+    "anthropic/claude-opus-5.5",
+    "google/gemini-3.8-flash"
+  ],
+  "synthesizer": "anthropic/claude-sonnet-5.5",
+  "deciders": ["typesafe/jev-1.13", "perplexity/pplx-decider-v1-27b"],
+  "threshold": 0.6
+}
