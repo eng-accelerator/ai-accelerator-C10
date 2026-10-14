@@ -1,0 +1,13 @@
+---
+description: Stricter rules for test files
+globs: tests/**/*.py, **/test_*.py
+alwaysApply: false
+---
+Rules for test code, on top of the Python conventions:
+- Every test function name starts with `test_` and states the behaviour, for example `test_timeout_returns_failed_result`.
+- One behaviour per test. No loops that hide multiple assertions.
+- Use pytest fixtures and `tmp_path`; never write to the real filesystem outside `tmp_path`.
+- No network calls. Use the stub model and `httpx.MockTransport`.
+- Use list comprehensions instead of loops where they read better.
+- Variable names must be descriptive: no single letters except loop counters.
+- Add an `if __name__ == "__main__":` guard to any test helper that is also a script.

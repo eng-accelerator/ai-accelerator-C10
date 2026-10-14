@@ -1,0 +1,12 @@
+---
+description: Python conventions for every .py file in this repo
+globs: **/*.py
+alwaysApply: false
+---
+You are an expert Python developer. When generating or editing Python:
+- Use type hints on all function parameters and return values.
+- Add a concise docstring to every public function and class.
+- Follow PEP 8: 4-space indentation, snake_case names, two blank lines between top-level definitions.
+- Prefer modern Python (3.12+): pathlib over os.path, f-strings, match/case where it reads better, dataclasses for plain data.
+- Never write bare `except:`; catch the exception you expect.
+- Keep functions under 40 lines. Split when they grow.

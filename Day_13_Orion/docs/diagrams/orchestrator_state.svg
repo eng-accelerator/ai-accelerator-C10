@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1390" height="692" viewBox="0 0 1390 692" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1390" height="692" fill="#ffffff"/>
+<text x="40" y="50" font-size="30" font-weight="600" fill="#1e1e1e">The state through one run</text>
+<rect x="40" y="100" width="110" height="34" fill="#e8eef4" stroke="#adb5bd" stroke-width="1"/>
+<text x="95.0" y="122" font-size="15" font-weight="bold" fill="#1e1e1e" text-anchor="middle">step</text>
+<rect x="150" y="100" width="150" height="34" fill="#e8eef4" stroke="#adb5bd" stroke-width="1"/>
+<text x="225.0" y="122" font-size="15" font-weight="bold" fill="#1e1e1e" text-anchor="middle">feature_request</text>
+<rect x="300" y="100" width="190" height="34" fill="#e8eef4" stroke="#adb5bd" stroke-width="1"/>
+<text x="395.0" y="122" font-size="15" font-weight="bold" fill="#1e1e1e" text-anchor="middle">plan</text>
+<rect x="490" y="100" width="230" height="34" fill="#e8eef4" stroke="#adb5bd" stroke-width="1"/>
+<text x="605.0" y="122" font-size="15" font-weight="bold" fill="#1e1e1e" text-anchor="middle">code</text>
+<rect x="720" y="100" width="170" height="34" fill="#e8eef4" stroke="#adb5bd" stroke-width="1"/>
+<text x="805.0" y="122" font-size="15" font-weight="bold" fill="#1e1e1e" text-anchor="middle">test</text>
+<rect x="890" y="100" width="150" height="34" fill="#e8eef4" stroke="#adb5bd" stroke-width="1"/>
+<text x="965.0" y="122" font-size="15" font-weight="bold" fill="#1e1e1e" text-anchor="middle">AI review</text>
+<rect x="1040" y="100" width="170" height="34" fill="#e8eef4" stroke="#adb5bd" stroke-width="1"/>
+<text x="1125.0" y="122" font-size="15" font-weight="bold" fill="#1e1e1e" text-anchor="middle">human</text>
+<rect x="1210" y="100" width="120" height="34" fill="#e8eef4" stroke="#adb5bd" stroke-width="1"/>
+<text x="1270.0" y="122" font-size="15" font-weight="bold" fill="#1e1e1e" text-anchor="middle">tests / reviews</text>
+<rect x="40" y="134" width="110" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="95.0" y="156" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">START</text>
+<rect x="150" y="134" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="225.0" y="156" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">add a system prompt</text>
+<rect x="300" y="134" width="190" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="395.0" y="156" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="490" y="134" width="230" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="605.0" y="156" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="720" y="134" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="805.0" y="156" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="890" y="134" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="965.0" y="156" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1040" y="134" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1125.0" y="156" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1210" y="134" width="120" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1270.0" y="156" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">0 / 0</text>
+<rect x="40" y="168" width="110" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="95.0" y="190" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">plan</text>
+<rect x="150" y="168" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="225.0" y="190" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="300" y="168" width="190" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="395.0" y="190" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">modify config, chat, app</text>
+<rect x="490" y="168" width="230" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="605.0" y="190" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="720" y="168" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="805.0" y="190" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="890" y="168" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="965.0" y="190" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1040" y="168" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1125.0" y="190" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1210" y="168" width="120" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1270.0" y="190" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">0 / 0</text>
+<rect x="40" y="202" width="110" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="95.0" y="224" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">code</text>
+<rect x="150" y="202" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="225.0" y="224" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="300" y="202" width="190" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="395.0" y="224" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="490" y="202" width="230" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="605.0" y="224" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">v1 x3 (not on disk)</text>
+<rect x="720" y="202" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="805.0" y="224" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="890" y="202" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="965.0" y="224" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1040" y="202" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1125.0" y="224" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1210" y="202" width="120" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1270.0" y="224" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">0 / 0</text>
+<rect x="40" y="236" width="110" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="95.0" y="258" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">test</text>
+<rect x="150" y="236" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="225.0" y="258" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="300" y="236" width="190" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="395.0" y="258" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="490" y="236" width="230" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="605.0" y="258" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">v1 x3</text>
+<rect x="720" y="236" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="805.0" y="258" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">3 passed (on a copy)</text>
+<rect x="890" y="236" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="965.0" y="258" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1040" y="236" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1125.0" y="258" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1210" y="236" width="120" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1270.0" y="258" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">1 / 0</text>
+<rect x="40" y="270" width="110" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="95.0" y="292" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">AI review</text>
+<rect x="150" y="270" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="225.0" y="292" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="300" y="270" width="190" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="395.0" y="292" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="490" y="270" width="230" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="605.0" y="292" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">v1 x3</text>
+<rect x="720" y="270" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="805.0" y="292" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">3 passed</text>
+<rect x="890" y="270" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="965.0" y="292" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">rejected: reason_1</text>
+<rect x="1040" y="270" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1125.0" y="292" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1210" y="270" width="120" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1270.0" y="292" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">1 / 1</text>
+<rect x="40" y="304" width="110" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="95.0" y="326" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">code</text>
+<rect x="150" y="304" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="225.0" y="326" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="300" y="304" width="190" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="395.0" y="326" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="490" y="304" width="230" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="605.0" y="326" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">v2 x3 (reason_1 in the prompt)</text>
+<rect x="720" y="304" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="805.0" y="326" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="890" y="304" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="965.0" y="326" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1040" y="304" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1125.0" y="326" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1210" y="304" width="120" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1270.0" y="326" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">1 / 1</text>
+<rect x="40" y="338" width="110" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="95.0" y="360" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">test</text>
+<rect x="150" y="338" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="225.0" y="360" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="300" y="338" width="190" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="395.0" y="360" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="490" y="338" width="230" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="605.0" y="360" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">v2 x3</text>
+<rect x="720" y="338" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="805.0" y="360" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">3 passed</text>
+<rect x="890" y="338" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="965.0" y="360" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1040" y="338" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1125.0" y="360" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1210" y="338" width="120" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1270.0" y="360" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">2 / 1</text>
+<rect x="40" y="372" width="110" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="95.0" y="394" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">AI review</text>
+<rect x="150" y="372" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="225.0" y="394" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="300" y="372" width="190" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="395.0" y="394" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="490" y="372" width="230" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="605.0" y="394" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">v2 x3</text>
+<rect x="720" y="372" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="805.0" y="394" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">3 passed</text>
+<rect x="890" y="372" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="965.0" y="394" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">approved</text>
+<rect x="1040" y="372" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1125.0" y="394" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1210" y="372" width="120" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1270.0" y="394" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">2 / 2</text>
+<rect x="40" y="406" width="110" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="95.0" y="428" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">human review</text>
+<rect x="150" y="406" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="225.0" y="428" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="300" y="406" width="190" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="395.0" y="428" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="490" y="406" width="230" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="605.0" y="428" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">v2 x3</text>
+<rect x="720" y="406" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="805.0" y="428" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">3 passed</text>
+<rect x="890" y="406" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="965.0" y="428" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">approved</text>
+<rect x="1040" y="406" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1125.0" y="428" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">paused, then approve</text>
+<rect x="1210" y="406" width="120" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1270.0" y="428" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">2 / 2</text>
+<rect x="40" y="440" width="110" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="95.0" y="462" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">apply</text>
+<rect x="150" y="440" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="225.0" y="462" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="300" y="440" width="190" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="395.0" y="462" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="490" y="440" width="230" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="605.0" y="462" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">v2 x3 written to disk</text>
+<rect x="720" y="440" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="805.0" y="462" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="890" y="440" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="965.0" y="462" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1040" y="440" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1125.0" y="462" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1210" y="440" width="120" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1270.0" y="462" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">2 / 2</text>
+<rect x="40" y="474" width="110" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="95.0" y="496" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">verify</text>
+<rect x="150" y="474" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="225.0" y="496" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="300" y="474" width="190" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="395.0" y="496" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="490" y="474" width="230" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="605.0" y="496" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">on disk</text>
+<rect x="720" y="474" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="805.0" y="496" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">3 passed (real files)</text>
+<rect x="890" y="474" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="965.0" y="496" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1040" y="474" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1125.0" y="496" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1210" y="474" width="120" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1270.0" y="496" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">2 / 2</text>
+<rect x="40" y="508" width="110" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="95.0" y="530" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">END</text>
+<rect x="150" y="508" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="225.0" y="530" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="300" y="508" width="190" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="395.0" y="530" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">same</text>
+<rect x="490" y="508" width="230" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="605.0" y="530" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">done</text>
+<rect x="720" y="508" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="805.0" y="530" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">done</text>
+<rect x="890" y="508" width="150" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="965.0" y="530" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1040" y="508" width="170" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1125.0" y="530" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">-</text>
+<rect x="1210" y="508" width="120" height="34" fill="#ffffff" stroke="#adb5bd" stroke-width="1"/>
+<text x="1270.0" y="530" font-size="14" font-weight="normal" fill="#1e1e1e" text-anchor="middle">2 / 2</text>
+<text x="40" y="612" font-size="19" fill="#343a40">What each field holds after each node. The second code row is the one to notice: v2 was written with the</text>
+<text x="40" y="642" font-size="19" fill="#343a40">reviewer's reason in the prompt. A human reject would send both counters back to 0 / 0.</text>
+</svg>

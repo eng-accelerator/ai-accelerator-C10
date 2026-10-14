@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1736" height="780" viewBox="0 0 1736 780" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1736" height="780" fill="#ffffff"/>
+<text x="40" y="50" font-size="30" font-weight="600" fill="#1e1e1e">The orchestrator: plan, code, test, review, approve, apply, verify</text>
+<polyline points="136.0,332.6 180.0,333.1" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="340.0,334.0 380.0,334.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="540.0,334.0 580.0,334.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="740.0,334.0 780.0,334.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<text x="742.0" y="296.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">tests pass</text>
+<polyline points="940.0,334.0 980.0,334.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<text x="890.0" y="296.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">approved</text>
+<polyline points="1140.0,334.0 1180.0,334.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<text x="1140.0" y="296.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">approve</text>
+<polyline points="1340.0,334.0 1380.0,334.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="1540.0,333.0 1580.0,332.6" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="660.0,368.0 655.0,440.0 455.0,440.0 460.0,368.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)" stroke-dasharray="8,6"/>
+<text x="555.0" y="470.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">fail, attempts left:</text>
+<text x="555.0" y="489.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">back with the traceback</text>
+<polyline points="860.0,368.0 855.0,520.0 455.0,520.0 460.0,368.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)" stroke-dasharray="8,6"/>
+<text x="760.0" y="550.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">revise: feedback goes</text>
+<text x="760.0" y="569.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">into the coder prompt (max 2)</text>
+<polyline points="1060.0,300.0 1055.0,160.0 455.0,160.0 460.0,300.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)" stroke-dasharray="8,6"/>
+<text x="760.0" y="140.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">reject + reason: counters reset</text>
+<polyline points="660.0,300.0 655.0,220.0 1055.0,220.0 1060.0,300.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)" stroke-dasharray="8,6"/>
+<text x="855.0" y="200.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">fail at the cap: the human sees it</text>
+<polyline points="260.0,368.0 228.0,560.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)" stroke-dasharray="8,6"/>
+<text x="120.0" y="470.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">a planned path escapes</text>
+<text x="120.0" y="489.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">the workspace</text>
+<rect x="40" y="312" width="96" height="40" rx="12" fill="#d0ebff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="88.0" y="337.9" font-size="17" fill="#1e1e1e" text-anchor="middle">START</text>
+<ellipse cx="260.0" cy="334.0" rx="80.0" ry="34.0" fill="#e9ecef" stroke="#1e1e1e" stroke-width="2"/>
+<text x="260.0" y="341.4" font-size="21" fill="#1e1e1e" text-anchor="middle">plan</text>
+<ellipse cx="460.0" cy="334.0" rx="80.0" ry="34.0" fill="#e9ecef" stroke="#1e1e1e" stroke-width="2"/>
+<text x="460.0" y="341.4" font-size="21" fill="#1e1e1e" text-anchor="middle">code</text>
+<ellipse cx="660.0" cy="334.0" rx="80.0" ry="34.0" fill="#e9ecef" stroke="#1e1e1e" stroke-width="2"/>
+<text x="660.0" y="341.4" font-size="21" fill="#1e1e1e" text-anchor="middle">test</text>
+<ellipse cx="860.0" cy="334.0" rx="80.0" ry="34.0" fill="#e9ecef" stroke="#1e1e1e" stroke-width="2"/>
+<text x="860.0" y="341.4" font-size="21" fill="#1e1e1e" text-anchor="middle">AI review</text>
+<ellipse cx="1060.0" cy="334.0" rx="80.0" ry="34.0" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1060.0" y="341.4" font-size="21" fill="#1e1e1e" text-anchor="middle">human review</text>
+<ellipse cx="1260.0" cy="334.0" rx="80.0" ry="34.0" fill="#e9ecef" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1260.0" y="341.4" font-size="21" fill="#1e1e1e" text-anchor="middle">apply</text>
+<ellipse cx="1460.0" cy="334.0" rx="80.0" ry="34.0" fill="#e9ecef" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1460.0" y="341.4" font-size="21" fill="#1e1e1e" text-anchor="middle">verify</text>
+<rect x="1580" y="312" width="96" height="40" rx="12" fill="#d0ebff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1628.0" y="337.9" font-size="17" fill="#1e1e1e" text-anchor="middle">END</text>
+<rect x="180" y="560" width="96" height="40" rx="12" fill="#d0ebff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="228.0" y="586.0" font-size="17" fill="#1e1e1e" text-anchor="middle">END</text>
+<text x="40" y="670" font-size="19" fill="#343a40">Tests run on a copy of the workspace before anyone reviews. Only passing code reaches the AI reviewer, and only</text>
+<text x="40" y="700" font-size="19" fill="#343a40">reviewed code reaches the human. A reject carries the human's reason back to the coder. Apply writes the real files;</text>
+<text x="40" y="730" font-size="19" fill="#343a40">verify runs the tests once more on them.</text>
+</svg>

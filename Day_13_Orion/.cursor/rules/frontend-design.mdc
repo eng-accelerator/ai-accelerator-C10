@@ -1,0 +1,19 @@
+---
+description: Visual rules for all UI code; the full system is in DESIGN.md
+globs: **/*.tsx, **/*.css, **/*.jsx
+alwaysApply: false
+---
+Before writing or changing UI, apply the design system below in full.
+The short version:
+1. Prefer utility over decoration.
+2. Make the primary user task immediately obvious.
+3. Use light, depth, and colour deliberately, not everywhere.
+4. Purple (`--accent`) signals AI, active states, and primary actions. One dominant accent per screen.
+5. Monospace only for code, metrics, shortcuts, commands, model names, technical metadata.
+6. Keep interaction states visible: default, hover, focus, disabled, loading, empty, error.
+7. Never convey status by colour alone; pair it with an icon or label.
+8. No arbitrary hex values, spacing, radii, or shadows. Use the tokens.
+9. No light backgrounds inside the product UI. No glassmorphism, neon, or bright gradients on ordinary surfaces.
+10. AI output that needs review must look reviewable: show accept, apply, edit, retry, or view diff next to it.
+
+@DESIGN.md

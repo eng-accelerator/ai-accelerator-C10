@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="598" viewBox="0 0 960 598" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="960" height="598" fill="#ffffff"/>
+<text x="40" y="50" font-size="30" font-weight="600" fill="#1e1e1e">The agent loop</text>
+<polyline points="375.8,120.0 378.6,190.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="358.0,258.0 358.0,380.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<text x="265.0" y="320.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">tool_calls non-empty</text>
+<polyline points="402.0,380.0 402.0,258.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<text x="470.0" y="320.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">tool result</text>
+<polyline points="460.0,223.4 600.0,222.4" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<text x="530.0" y="190.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">tool_calls empty</text>
+<rect x="327" y="80" width="96" height="40" rx="12" fill="#d0ebff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="375.0" y="106.0" font-size="17" fill="#1e1e1e" text-anchor="middle">START</text>
+<ellipse cx="380.0" cy="224.0" rx="80.0" ry="34.0" fill="#e9ecef" stroke="#1e1e1e" stroke-width="2"/>
+<text x="380.0" y="231.3" font-size="21" fill="#1e1e1e" text-anchor="middle">agent</text>
+<ellipse cx="380.0" cy="414.0" rx="80.0" ry="34.0" fill="#e9ecef" stroke="#1e1e1e" stroke-width="2"/>
+<text x="380.0" y="421.4" font-size="21" fill="#1e1e1e" text-anchor="middle">tools</text>
+<rect x="600" y="202" width="96" height="40" rx="12" fill="#d0ebff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="648.0" y="227.9" font-size="17" fill="#1e1e1e" text-anchor="middle">END</text>
+<text x="40" y="518" font-size="19" fill="#343a40">The model decides which tool to call. The tool runs. The model sees the result and decides again,</text>
+<text x="40" y="548" font-size="19" fill="#343a40">until an answer comes back with no tool calls.</text>
+</svg>

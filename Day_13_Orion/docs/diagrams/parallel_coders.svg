@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1176" height="628" viewBox="0 0 1176 628" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker></defs>
+<rect width="1176" height="628" fill="#ffffff"/>
+<text x="40" y="50" font-size="30" font-weight="600" fill="#1e1e1e">Parallel coders with Send</text>
+<polyline points="136.0,282.6 180.0,283.1" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="306.6,256.4 483.4,151.6" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<text x="390.0" y="150.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">Send</text>
+<polyline points="340.0,284.0 450.0,284.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<text x="390.0" y="268.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">Send</text>
+<polyline points="306.6,311.6 483.4,416.4" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<text x="390.0" y="390.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">Send</text>
+<polyline points="584.5,148.9 825.5,259.1" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="610.0,284.0 800.0,284.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<text x="700.0" y="250.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">reducer:</text>
+<text x="700.0" y="269.0" font-size="16" fill="#495057" text-anchor="middle" stroke="#ffffff" stroke-width="5" paint-order="stroke">add_to_list</text>
+<polyline points="584.5,419.1 825.5,308.9" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<polyline points="960.0,283.1 1020.0,282.5" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="40" y="262" width="96" height="40" rx="12" fill="#d0ebff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="88.0" y="287.9" font-size="17" fill="#1e1e1e" text-anchor="middle">START</text>
+<ellipse cx="260.0" cy="284.0" rx="80.0" ry="34.0" fill="#e9ecef" stroke="#1e1e1e" stroke-width="2"/>
+<text x="260.0" y="291.4" font-size="21" fill="#1e1e1e" text-anchor="middle">plan</text>
+<ellipse cx="530.0" cy="124.0" rx="80.0" ry="34.0" fill="#e9ecef" stroke="#1e1e1e" stroke-width="2"/>
+<text x="530.0" y="118.8" font-size="21" fill="#1e1e1e" text-anchor="middle">code_file</text>
+<text x="530.0" y="143.9" font-size="21" fill="#1e1e1e" text-anchor="middle">config.py</text>
+<ellipse cx="530.0" cy="284.0" rx="80.0" ry="34.0" fill="#e9ecef" stroke="#1e1e1e" stroke-width="2"/>
+<text x="530.0" y="278.8" font-size="21" fill="#1e1e1e" text-anchor="middle">code_file</text>
+<text x="530.0" y="303.9" font-size="21" fill="#1e1e1e" text-anchor="middle">chat.py</text>
+<ellipse cx="530.0" cy="444.0" rx="80.0" ry="34.0" fill="#e9ecef" stroke="#1e1e1e" stroke-width="2"/>
+<text x="530.0" y="438.8" font-size="21" fill="#1e1e1e" text-anchor="middle">code_file</text>
+<text x="530.0" y="463.9" font-size="21" fill="#1e1e1e" text-anchor="middle">app.py</text>
+<ellipse cx="880.0" cy="284.0" rx="80.0" ry="34.0" fill="#e9ecef" stroke="#1e1e1e" stroke-width="2"/>
+<text x="880.0" y="291.4" font-size="21" fill="#1e1e1e" text-anchor="middle">collect</text>
+<rect x="1020" y="262" width="96" height="40" rx="12" fill="#d0ebff" stroke="#1e1e1e" stroke-width="2"/>
+<text x="1068.0" y="287.9" font-size="17" fill="#1e1e1e" text-anchor="middle">END</text>
+<text x="40" y="548" font-size="19" fill="#343a40">One plan, then one copy of the coder per file, all running at once. Send creates the copies with different inputs;</text>
+<text x="40" y="578" font-size="19" fill="#343a40">the reducer on generated_code merges their results into one list.</text>
+</svg>

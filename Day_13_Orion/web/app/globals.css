@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    background-color: #0B0B0D;
+    color: #F4F4F5;
+    font-family: var(--font-inter), Inter, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection {
+    background-color: #211B38;
+    color: #F4F4F5;
+  }
+}
+
+@layer components {
+  .stage-bg {
+    background-image: radial-gradient(#1F1F24 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .scanlines::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 2px,
+      rgba(255, 255, 255, 0.015) 3px,
+      transparent 4px
+    );
+  }
+  .terminal-cursor::after {
+    content: "_";
+    margin-left: 2px;
+    animation: blink 1s steps(2, start) infinite;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
